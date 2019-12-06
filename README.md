@@ -9,16 +9,20 @@
 - Snake
 - Reaction game (Own idea)
 
-## Completed list:
+## Completed:
 - Main menu
 
 
-## Uncompleted list:
+## Uncompleted:
 - Ping pong
 - Space invaders
 - Snake
 - Reaction game (Own idea)
 
+
+Starting date:
+
+# 9/06 - 2019
 
 Updated:
 
