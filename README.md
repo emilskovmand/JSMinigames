@@ -1,5 +1,6 @@
 # JSMinigames
-4 JavaScript games and a main menu
+4 JavaScript games and a main menu.
+I will be uploading the project to my own domain once its done.
 
 **_Subject list:_**
 
