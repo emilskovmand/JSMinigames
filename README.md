@@ -4,11 +4,11 @@ I will be uploading the project to my own domain once its done.
 
 **_Subject list:_**
 
-- Main menu
-- Ping pong
-- Space invaders
-- Snake
-- Reaction game (Own idea)
+- [x] Main menu
+- [] Ping pong
+- [] Space invaders
+- [] Snake
+- [] Reaction game (Own idea)
 
 ## Completed:
 - Main menu
