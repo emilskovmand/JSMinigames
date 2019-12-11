@@ -1,0 +1,193 @@
+$black: #0a0a0a;
+@import "game";
+
+@font-face {
+    font-family: 'arcade';
+    src: url(../other/font/PressStart2P.ttf) format('truetype');
+}
+
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body#mainMenu {
+    overflow: hidden;
+
+    main {
+        z-index: 4;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        .info1 {
+            position: absolute;
+            top: 0;
+            margin-top: .2rem;
+            text-align: center;
+            width: 100%;
+            z-index: -1;
+            user-select: none;
+            font-size: .8rem;
+            text-shadow: -1px -1px 0 #0000002d,
+                1px -1px 0 #0000002d,
+                -1px 1px 0 #0000002d,
+                1px 1px 0 #0000002d;
+        }
+
+        .info2 {
+            position: absolute;
+            bottom: 0%;
+            margin-bottom: .2rem;
+            text-align: center;
+            width: 100%;
+            z-index: -1;
+            user-select: none;
+            font-size: .8rem;
+            text-shadow: -1px -1px 0 #0000002d,
+                1px -1px 0 #0000002d,
+                -1px 1px 0 #0000002d,
+                1px 1px 0 #0000002d;
+        }
+    }
+
+    canvas {
+        z-index: 1;
+        position: absolute;
+        background-color: #0a0a0a;
+        user-select: none;
+    }
+}
+
+$white: #f5eeee;
+
+.button {
+    position: absolute;
+    height: 11vh;
+    width: 26%;
+    background-color: transparent;
+    border-radius: 17vh;
+    border: 3px solid $white;
+    display: inline-block;
+    transition: transform .5s ease;
+    box-shadow: 18px 17px 17px 6px #000000bf;
+
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.075, 1.075);
+
+        .iconplacement {
+            .gameicon {
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-top-color: #f01515;
+                border-bottom-color: #f01515;
+                animation: rotate 20s infinite linear forwards;
+
+                @keyframes rotate {
+                    to {
+                        transform: translate(-50%, -50%) rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .iconplacement {
+        width: 7rem;
+        height: 100%;
+        margin-left: 0%;
+        position: relative;
+
+        .gameicon {
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 7.4vh;
+            width: 7.4vh;
+            border: 3px solid $white;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 60%;
+            user-select: none;
+        }
+    }
+
+    .titleplacement {
+        height: 100%;
+        text-align: center;
+        position: relative;
+
+        div {
+            position: absolute;
+            top: 50%;
+            width: 1%;
+            color: $white;
+            font-size: .8rem;
+            white-space: pre;
+            font-family: 'arcade';
+            transform: translate(0%, -50%);
+            text-transform: uppercase;
+            user-select: none;
+            text-shadow: 2px 0 #00ffea;
+            letter-spacing: .16rem;
+        }
+    }
+
+    >* {
+        float: left;
+    }
+}
+
+$discon: 16vh;
+
+.top-left {
+    top: $discon;
+    left: $discon;
+}
+
+.top-right {
+    top: $discon;
+    right: $discon;
+}
+
+.bottom-left {
+    bottom: $discon;
+    left: $discon;
+}
+
+.bottom-right {
+    bottom: $discon;
+    right: $discon;
+}
+
+
+#game1Icon {
+    background-image: url(../other/image/);
+}
+
+#game2Icon {
+    background-image: url(../other/image/);
+}
+
+#game3Icon {
+    background-image: url(../other/image/);
+}
+
+#game4Icon {
+    background-image: url(../other/image/);
+}
+
+@media screen and (min-width: 1300px) {
+    .titleplacement {
+        div {
+            font-size: 1.4rem;
+        }
+    }
+}

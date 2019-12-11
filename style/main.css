@@ -1,0 +1,251 @@
+body#game {
+  position: relative;
+}
+
+body#game #Background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+body#game main {
+  height: 100%;
+  margin: 0 auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body#game main #gameContainer {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  border: .2rem outset #13f0f0;
+  background-color: #0a0a0a;
+}
+
+body#game main #gameContainer canvas {
+  width: 100%;
+  height: 100%;
+}
+
+body#game main #infoContainer {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin-top: 2rem;
+}
+
+@font-face {
+  font-family: 'arcade';
+  src: url(../other/font/PressStart2P.ttf) format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body#mainMenu {
+  overflow: hidden;
+}
+
+body#mainMenu main {
+  z-index: 4;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+body#mainMenu main .info1 {
+  position: absolute;
+  top: 0;
+  margin-top: .2rem;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: .8rem;
+  text-shadow: -1px -1px 0 #0000002d, 1px -1px 0 #0000002d, -1px 1px 0 #0000002d, 1px 1px 0 #0000002d;
+}
+
+body#mainMenu main .info2 {
+  position: absolute;
+  bottom: 0%;
+  margin-bottom: .2rem;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: .8rem;
+  text-shadow: -1px -1px 0 #0000002d, 1px -1px 0 #0000002d, -1px 1px 0 #0000002d, 1px 1px 0 #0000002d;
+}
+
+body#mainMenu canvas {
+  z-index: 1;
+  position: absolute;
+  background-color: #0a0a0a;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.button {
+  position: absolute;
+  height: 11vh;
+  width: 26%;
+  background-color: transparent;
+  border-radius: 17vh;
+  border: 3px solid #f5eeee;
+  display: inline-block;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  -webkit-box-shadow: 18px 17px 17px 6px #000000bf;
+          box-shadow: 18px 17px 17px 6px #000000bf;
+}
+
+.button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.075, 1.075);
+          transform: scale(1.075, 1.075);
+}
+
+.button:hover .iconplacement .gameicon {
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #f01515;
+  border-bottom-color: #f01515;
+  -webkit-animation: rotate 20s infinite linear forwards;
+          animation: rotate 20s infinite linear forwards;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.button .iconplacement {
+  width: 7rem;
+  height: 100%;
+  margin-left: 0%;
+  position: relative;
+}
+
+.button .iconplacement .gameicon {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 7.4vh;
+  width: 7.4vh;
+  border: 3px solid #f5eeee;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.button .titleplacement {
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.button .titleplacement div {
+  position: absolute;
+  top: 50%;
+  width: 1%;
+  color: #f5eeee;
+  font-size: .8rem;
+  white-space: pre;
+  font-family: 'arcade';
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-shadow: 2px 0 #00ffea;
+  letter-spacing: .16rem;
+}
+
+.button > * {
+  float: left;
+}
+
+.top-left {
+  top: 16vh;
+  left: 16vh;
+}
+
+.top-right {
+  top: 16vh;
+  right: 16vh;
+}
+
+.bottom-left {
+  bottom: 16vh;
+  left: 16vh;
+}
+
+.bottom-right {
+  bottom: 16vh;
+  right: 16vh;
+}
+
+#game1Icon {
+  background-image: url(../other/image/);
+}
+
+#game2Icon {
+  background-image: url(../other/image/);
+}
+
+#game3Icon {
+  background-image: url(../other/image/);
+}
+
+#game4Icon {
+  background-image: url(../other/image/);
+}
+
+@media screen and (min-width: 1300px) {
+  .titleplacement div {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

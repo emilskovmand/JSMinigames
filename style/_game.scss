@@ -1,0 +1,30 @@
+body#game {
+    position: relative;
+    #Background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    main {
+        height: 100%;
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        #gameContainer {
+            flex: 7;
+            border: .2rem outset #13f0f0;
+            background-color: $black;
+            canvas {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        #infoContainer {
+            flex: 3;
+            margin-top: 2rem;
+        }
+    }
+}
